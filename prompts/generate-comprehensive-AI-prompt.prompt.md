@@ -2,14 +2,14 @@
 <!---
    <category>prompt-engineering</category>
    <models>
-      <model>general</model>
+      <model>any</model>
    </models>
    <tags>
       <tag>prompt-design</tag>
       <tag>specification</tag>
       <tag>structure</tag>
    </tags>
-   <descriptions>Comprehensive structured instructions template for generating high-quality AI prompts with clear categories and success criteria.</descriptions>
+   <description>Comprehensive structured instructions template for generating high-quality AI prompts with clear categories and success criteria.</description>
    <version>1.0</version>
    <language>en</language>
    <status>stable</status>
