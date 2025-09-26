@@ -1,0 +1,8 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: build-index
+        name: Build prompt index
+        entry: python scripts/build_index.py
+        language: system
+        pass_filenames: false

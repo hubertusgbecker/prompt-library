@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build & Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "${HOME}/.local/bin" >> $GITHUB_PATH
+
+      - name: Sync dependencies (dev group)
+        run: uv sync --group dev
+
+      - name: Run pre-commit (all files)
+        run: uv run pre-commit run --all-files
+
+      - name: Build prompt index
+        run: |
+          uv run python scripts/build_index.py
+          git diff --exit-code prompts/INDEX.md || (echo 'Run scripts/build_index.py and commit updated index.' && exit 1)
+
+      - name: Placeholder tests
+        run: echo "No tests defined yet"
+
+      - name: Upload generated index (artifact on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: prompt-index
+          path: prompts/INDEX.md

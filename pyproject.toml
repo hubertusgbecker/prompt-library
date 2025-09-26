@@ -1,0 +1,20 @@
+[project]
+name = "prompt-library"
+version = "0.1.0"
+description = "Curated library of reusable AI prompt templates and utilities"
+authors = [ { name = "Maintainers" } ]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+# For future runtime extras; currently no runtime package deps
+
+[tool.uv]
+# (Optional uv settings can go here; version pin not needed because requires-python already set)
+
+[dependency-groups]
+# Dev dependencies managed by uv (uv add --group dev <pkg>)
+dev = [
+  "pre-commit>=3.8.0",
+]
