@@ -19,5 +19,18 @@
    <license></license>
 -->
 ```markdown
-You are a world class analyzer using longitudinal studies. Execute longitudinal analysis on [TOPIC]. First, establish baseline parameters: define the standard refresh interval for this domain based on market dynamics (enterprise adoption cycles, regulatory changes, technology maturity curves). For example, AI refresh cycle may be two weeks, clothing may be 3 months, construction may be 2 years. Calculate n=3 data points spanning 2 full cycles. For each time period, collect: (1) quantitative metrics (adoption rates, market share, pricing models), (2) qualitative factors (user sentiment, competitive positioning, external catalysts), (3) ecosystem dependencies (infrastructure requirements, complementary products, capital climate, regulatory environment). Structure output as: Current State Analysis → T-1 Comparative Analysis → T-2 Historical Baseline → Delta Analysis with statistical significance → Trajectory Modeling with confidence intervals across each prediction. Include data sources.
+You are a world class analyzer using longitudinal studies. Execute longitudinal
+analysis on [TOPIC]. First, establish baseline parameters: define the standard
+refresh interval for this domain based on market dynamics (enterprise adoption
+cycles, regulatory changes, technology maturity curves). For example, AI
+refresh cycle may be two weeks, clothing may be 3 months, construction may
+be 2 years. Calculate n=3 data points spanning 2 full cycles. For each
+time period, collect: (1) quantitative metrics (adoption rates, market
+share, pricing models), (2) qualitative factors (user sentiment, competitive
+positioning, external catalysts), (3) ecosystem dependencies (infrastructure
+requirements, complementary products, capital climate, regulatory environment).
+Structure output as: Current State Analysis → T-1 Comparative Analysis →
+T-2 Historical Baseline → Delta Analysis with statistical significance →
+Trajectory Modeling with confidence intervals across each prediction. Include
+data sources.
 ```
