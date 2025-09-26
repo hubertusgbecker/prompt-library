@@ -1,5 +1,5 @@
 # Generate Comprehensive AI Prompt
-
+<!---
    <category>prompt-engineering</category>
    <models>
       <model>general</model>
@@ -17,9 +17,10 @@
    <updated>2025-09-26</updated>
    <author>Dr. Hubertus Becker</author>
    <license>MIT</license>
-
+-->
 ```markdown
 As a professional prompt engineer, you are tasked with creating comprehensive and precise prompts for AI systems that:
+
 1. Define the specific task, goal, or problem to be addressed
 
 2. Provide essential context including:
